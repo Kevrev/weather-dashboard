@@ -22,10 +22,23 @@ searchButton.on("click", () => {
         console.log(data);
         let lat = data[0].lat;
         let lon = data[0].lon;
-        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`)
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
+        });
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            const cityName = data.name;
+            const cityTemp = data.main.temp;
+            const cityWind = data.wind.speed;
+            const cityHumidity = data.main.humidity;
+            $(".cityName").text(cityName);
+            $(".cityTemp").text("Temperature " + cityTemp + "°F");
+            $(".cityWind").text("Wind: " + cityWind + " MPH");
+            $(".cityHumidity").text("Humidity " + cityHumidity + "%");
         });
     });
 });
