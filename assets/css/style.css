@@ -116,6 +116,10 @@
     background-color: #d3edf7;
 }
 
+.weatherIcons {
+    margin-left: 20px
+}
+
 .cardDay p {
     padding-left: 10%;
     font-family: Arial, Helvetica, sans-serif;
