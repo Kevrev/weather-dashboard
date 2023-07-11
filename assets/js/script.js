@@ -80,7 +80,6 @@ searchButton.on("click", () => {
           $(".wind5").text("Wind: " + wind5 + " MPH");
           $(".humidity5").text("Humidity " + humidity5 + "%");
             
-
         });
 
       fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=imperial`)
