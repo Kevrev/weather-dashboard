@@ -16,7 +16,7 @@ searchButton.on("click", () => {
 
   updateHistory();
 
-  fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${searchLocation}&limit=1&appid=${apiKey}`)
+  fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${searchLocation}&limit=1&appid=${apiKey}`)
     .then((response) => response.json())
     .then((data) => {
 
@@ -32,7 +32,7 @@ searchButton.on("click", () => {
           const wind1 = data.list[4].wind.speed;
           const humidity1 = data.list[4].main.humidity;
           $(".date1").text(date1);
-          $(".icon1").attr("src", `http://openweathermap.org/img/w/${icon1}.png`);
+          $(".icon1").attr("src", `https://openweathermap.org/img/w/${icon1}.png`);
           $(".temp1").text("Temperature " + temp1 + "°F");
           $(".wind1").text("Wind: " + wind1 + " MPH");
           $(".humidity1").text("Humidity " + humidity1 + "%");
@@ -43,7 +43,7 @@ searchButton.on("click", () => {
           const wind2 = data.list[12].wind.speed;
           const humidity2 = data.list[12].main.humidity;
           $(".date2").text(date2);
-          $(".icon2").attr("src", `http://openweathermap.org/img/w/${icon2}.png`);
+          $(".icon2").attr("src", `https://openweathermap.org/img/w/${icon2}.png`);
           $(".temp2").text("Temperature " + temp2 + "°F");
           $(".wind2").text("Wind: " + wind2 + " MPH");
           $(".humidity2").text("Humidity " + humidity2 + "%");
@@ -54,7 +54,7 @@ searchButton.on("click", () => {
           const wind3 = data.list[20].wind.speed;
           const humidity3 = data.list[20].main.humidity;
           $(".date3").text(date3);
-          $(".icon3").attr("src", `http://openweathermap.org/img/w/${icon3}.png`);
+          $(".icon3").attr("src", `https://openweathermap.org/img/w/${icon3}.png`);
           $(".temp3").text("Temperature " + temp3 + "°F");
           $(".wind3").text("Wind: " + wind3 + " MPH");
           $(".humidity3").text("Humidity " + humidity3 + "%");
@@ -65,7 +65,7 @@ searchButton.on("click", () => {
           const wind4 = data.list[28].wind.speed;
           const humidity4 = data.list[28].main.humidity;
           $(".date4").text(date4);
-          $(".icon4").attr("src", `http://openweathermap.org/img/w/${icon4}.png`);
+          $(".icon4").attr("src", `https://openweathermap.org/img/w/${icon4}.png`);
           $(".temp4").text("Temperature " + temp4 + "°F");
           $(".wind4").text("Wind: " + wind4 + " MPH");
           $(".humidity4").text("Humidity " + humidity4 + "%");
@@ -76,7 +76,7 @@ searchButton.on("click", () => {
           const wind5 = data.list[36].wind.speed;
           const humidity5 = data.list[36].main.humidity;
           $(".date5").text(date5);
-          $(".icon5").attr("src", `http://openweathermap.org/img/w/${icon5}.png`);
+          $(".icon5").attr("src", `https://openweathermap.org/img/w/${icon5}.png`);
           $(".temp5").text("Temperature " + temp5 + "°F");
           $(".wind5").text("Wind: " + wind5 + " MPH");
           $(".humidity5").text("Humidity " + humidity5 + "%");
