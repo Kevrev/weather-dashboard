@@ -93,7 +93,7 @@ searchButton.on("click", () => {
           const cityIcon = data.weather[0].icon;
           $(".cityName").text(cityName);
           $(".cityDate").text(currentDate + "");
-          $(".cityIcon").attr("src", `http://openweathermap.org/img/w/${cityIcon}.png`);
+          $(".cityIcon").attr("src", `https://openweathermap.org/img/w/${cityIcon}.png`);
           $(".cityTemp").text("Temperature " + cityTemp + "°F");
           $(".cityWind").text("Wind: " + cityWind + " MPH");
           $(".cityHumidity").text("Humidity " + cityHumidity + "%");
