@@ -4,6 +4,7 @@ let historyEl = $("#history");
 const apiKey = "c66e6044917758ba641fa9e4f9995846";
 const searchButton = $("#searchButton");
 const locationSearch = $("#locationSearch");
+const currentDate = dayjs().format('MM-DD-YYYY');
 
 searchButton.on("click", () => {
   let searchLocation = locationSearch.val();
@@ -91,6 +92,7 @@ searchButton.on("click", () => {
           const cityHumidity = data.main.humidity;
           const cityIcon = data.weather[0].icon;
           $(".cityName").text(cityName);
+          $(".cityDate").text(currentDate + "");
           $(".cityIcon").attr("src", `http://openweathermap.org/img/w/${cityIcon}.png`);
           $(".cityTemp").text("Temperature " + cityTemp + "°F");
           $(".cityWind").text("Wind: " + cityWind + " MPH");
